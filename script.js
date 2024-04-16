@@ -65,11 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const slideWidth = document.querySelector('.card').offsetWidth;
 
   function showSlides() {
-      slides.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
+      slides.style.transform = `translateX(-${(slideWidth * slideIndex) + 20}px)`;
   }
 
   function nextSlide() {
-      if (slideIndex < slides.children.length - 1) {
+      if (slideIndex < slides.children.length - 2) {
           slideIndex++;
       } else {
           slideIndex = 0;
