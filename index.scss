@@ -902,19 +902,24 @@ main {
       margin: 2rem 0rem;
       display: flex;
       flex-wrap: wrap;
+      width: 100%;
+      // background-color: #1081a6;
       justify-content: center;
-      width: 70%;
-      margin-block: 2rem;
+      // padding: 2rem;
+      // margin-block: 2rem;
       gap: 2rem;
-
+      overflow: hidden;
+      position: relative;
       img {
         max-width: 100%;
         display: block;
         object-fit: cover;
       }
-
+      @include lg{
+        width: 70%;
+      }
       .slider {
-        overflow: hidden;
+        // overflow: hidden;
         position: relative;
         width: 100%;
 
@@ -1000,7 +1005,20 @@ main {
           font-size: 24px;
           color: #333;
           transition: color 0.3s ease;
+          i{
+            font-size: 20px;
+            padding: .5rem;
+            border-radius: 50%;
+            background-color: white;
+            color: black;
+            z-index: 10;
 
+            @include lg{
+              font-size: 40px;
+              padding: .5rem;
+
+            }
+          }
           &:hover {
             color: #000;
           }
