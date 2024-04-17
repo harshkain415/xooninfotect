@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (slideIndex > 0) {
           slideIndex--;
       } else {
-          slideIndex = slides.children.length - 1;
+          slideIndex = slides.children.length - 2;
       }
       showSlides();
   }

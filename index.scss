@@ -165,7 +165,7 @@ a {
 
 main {
   width: 100%;
-  min-height: 120vh;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
 
@@ -242,7 +242,7 @@ main {
     }
   }
 
-  .nav-items>ul>li {
+  .nav-items > ul > li {
     position: relative;
     display: inline;
     list-style: none;
@@ -251,14 +251,14 @@ main {
     cursor: pointer;
   }
 
-  .nav-items>ul>li>a {
+  .nav-items > ul > li > a {
     color: $black;
     font-weight: 500;
     font-size: 19px;
     text-decoration: none;
   }
 
-  .nav-items>ul>li::after {
+  .nav-items > ul > li::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -271,7 +271,7 @@ main {
     transition: transform 0.3s ease;
   }
 
-  .nav-items>ul>li:hover::after {
+  .nav-items > ul > li:hover::after {
     transform: scaleX(1);
   }
 
@@ -326,6 +326,7 @@ main {
   .nav-button a {
     display: block;
     padding: 10px 20px;
+
     color: white;
     text-decoration: none;
     position: relative;
@@ -338,7 +339,7 @@ main {
     display: none;
   }
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 1000px) {
     #mobile-menu {
       background-color: $secondary;
       width: 100%;
@@ -355,11 +356,11 @@ main {
       z-index: 10;
     }
 
-    .mobile-nav-items>ul {
+    .mobile-nav-items > ul {
       padding: 0px;
     }
 
-    .mobile-nav-items>ul>li {
+    .mobile-nav-items > ul > li {
       text-align: center;
       position: relative;
       list-style: none;
@@ -368,12 +369,12 @@ main {
       cursor: pointer;
     }
 
-    .mobile-nav-items>ul>li>a {
+    .mobile-nav-items > ul > li > a {
       color: white;
       text-decoration: none;
     }
 
-    .mobile-nav-items>ul>li::after {
+    .mobile-nav-items > ul > li::after {
       content: "";
       position: absolute;
       width: 100%;
@@ -386,7 +387,7 @@ main {
       transition: transform 0.3s ease;
     }
 
-    .mobile-nav-items>ul>li:hover::after {
+    .mobile-nav-items > ul > li:hover::after {
       transform: scaleX(1);
     }
 
@@ -428,7 +429,7 @@ main {
       z-index: 1;
     }
 
-    .nav-items>ul,
+    .nav-items > ul,
     .nav-button {
       display: none;
     }
@@ -627,24 +628,23 @@ main {
   //   transform: translate(140%, 110%);
   // }
 
+  // ---------------------------------------------home page about section code start here
   .about {
     width: 100%;
     min-height: 70vh;
     color: $white;
     position: relative;
-    padding: 3rem 1rem;
+    padding: 7rem 0rem;
     flex-direction: column;
     justify-content: space-between;
   }
-
-  // mail , id, 
   .aboutContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
     padding: 0rem 1rem;
-
+    margin-bottom: 5rem;
     @include lg {
       flex-direction: row;
     }
@@ -742,6 +742,52 @@ main {
       }
     }
   }
+  // ---------------------------------------------home page about section code start here
+
+  // ----------------------------------------------  about page css start here
+  .about {
+    .mission {
+      background-color: $primary;
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+      // margin-top: 5rem;
+      flex-direction: column;
+
+      @include lg {
+        flex-direction: row;
+      }
+      .leftMission {
+        width: 100%;
+        justify-content: center;
+        margin: 2rem 0rem;
+        @include lg {
+          width: 20%;
+          justify-content: flex-start;
+        }
+      }
+
+      .rightMission {
+        width: 100%;
+        padding: 1rem;
+        text-align: justify;
+        p {
+          font-size: 18px;
+        }
+
+        @include lg {
+          width: 60%;
+          justify-content: flex-start;
+        }
+      }
+    }
+    :nth-child(4) {
+      background-color: #666;
+    }
+  }
+  // ----------------------------------------------  about page css start here
+
+  // ---------------------------------------------home page services  section code start here
 
   .services {
     width: 100%;
@@ -805,7 +851,74 @@ main {
       }
     }
   }
+  // ---------------------------------------------home page services  section code end here
 
+  // --------------------------------------------------- service page css start here
+  .servicesPage {
+    flex-direction: column;
+    width: 100;
+    min-height: 80vh;
+    background-color: $white;
+    padding: 7rem 2rem;
+    // @include lg{
+    //   padding: 7rem 2rem;
+    // }
+
+    .servicesDetails {
+      flex-direction: column;
+      .servicesCards {
+        flex-direction: column;
+        background-color: #ece9e6;
+        width: 100%;
+        padding: 2rem 1rem;
+        margin: 1rem 0rem;
+        border-radius: 10px;
+        @include lg {
+          flex-direction: row;
+          width: 70%;
+
+          .leftServicesCard {
+            width: 20%;
+            margin-right: 2rem;
+          }
+          .rightServicesCard {
+            margin-left: 2rem;
+            width: 60%;
+          }
+        }
+
+        .leftServicesCard img {
+          width: 150px;
+          height: auto;
+          object-fit: cover;
+          @include lg {
+            width: 200px;
+          }
+        }
+        .rightServicesCard {
+          margin-top: 3rem;
+
+          @include lg {
+            margin-top: 0rem;
+          }
+
+          h3 {
+            font-size: 25px;
+            margin: 1rem 0rem;
+          }
+          h5 {
+            font-size: 22px;
+            margin: 1rem 0rem;
+          }
+          ul {
+            padding-left: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  // --------------------------------------------------- service page css end here
   .parallax {
     width: 100%;
     height: 30vh;
@@ -915,7 +1028,7 @@ main {
         display: block;
         object-fit: cover;
       }
-      @include lg{
+      @include lg {
         width: 70%;
       }
       .slider {
@@ -951,7 +1064,7 @@ main {
                 font-size: 0.75rem;
               }
 
-              .tag+.tag {
+              .tag + .tag {
                 margin-left: 0.5em;
               }
 
@@ -981,7 +1094,7 @@ main {
                 border-radius: 50%;
               }
 
-              .userInfo>small {
+              .userInfo > small {
                 color: #666;
               }
             }
@@ -1005,18 +1118,17 @@ main {
           font-size: 24px;
           color: #333;
           transition: color 0.3s ease;
-          i{
+          i {
             font-size: 20px;
-            padding: .5rem;
+            padding: 0.5rem;
             border-radius: 50%;
-            background-color: white;
-            color: black;
+            background-color: $primary;
+            color: $white;
             z-index: 10;
 
-            @include lg{
+            @include lg {
               font-size: 40px;
-              padding: .5rem;
-
+              padding: 0.5rem;
             }
           }
           &:hover {
@@ -1032,9 +1144,92 @@ main {
           }
         }
       }
-
     }
   }
+
+  // blog page css start here
+  .blogPageContainer {
+    display: grid;
+    place-items: center;
+    min-height: 80vh;
+    padding: 7rem 2rem 2rem 2rem;
+    .heading {
+      color: $white;
+    }
+    .blogContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      margin-block: 2rem;
+      gap: 2rem;
+
+      img {
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        width: clamp(20rem, calc(20rem + 2vw), 22rem);
+        overflow: hidden;
+        box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+        border-radius: 1em;
+        background: #ece9e6;
+        background: linear-gradient(to right, #ffffff, #ece9e6);
+
+        .cardBody {
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          .tag {
+            align-self: flex-start;
+            padding: 0.25em 0.75em;
+            border-radius: 1em;
+            font-size: 0.75rem;
+          }
+
+          .tag + .tag {
+            margin-left: 0.5em;
+          }
+
+          .tag-blue {
+            background: #56ccf2;
+            background: linear-gradient(to bottom, #2f80ed, #1081a6);
+            color: #fafafa;
+          }
+
+          .cardBody h4 {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+          }
+        }
+
+        .cardFooter {
+          display: flex;
+          padding: 1rem;
+          margin-top: auto;
+          .user {
+            display: flex;
+            gap: 0.5rem;
+          }
+
+          .userImage {
+            border-radius: 50%;
+          }
+
+          .userInfo > small {
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+  // blog page css end here
 
   .contact {
     width: 100%;
@@ -1081,6 +1276,101 @@ main {
     }
   }
 
+  // contact page section start here
+  .contactContainerPage{
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    background-color: white;
+  }
+  .contact-container {
+    background-color: $primary;
+    color: $white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+    padding: 1rem 2rem;
+    width: 100%;
+    @include lg{
+      padding: 3rem 4rem;
+      width: 60%;
+    }
+
+  }
+  
+  .contact-left {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  
+  .contact-right {
+    width: 100%;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .contact-info span{
+    font-size: 18px;
+    @include md{
+      font-size: 20px;
+    }
+  }
+  
+  .contact-info i {
+    margin-right: 20px;
+    font-size: 30px;
+    @include lg{
+      font-size: 40px;
+    }
+  }
+  
+  .contact-right form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-right input,
+  .contact-right textarea,
+  .contact-right button {
+    margin-bottom: 10px;
+    padding: 15px;
+    outline: none;
+    // font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-right textarea {
+    height: 100px;
+  }
+  
+  .contact-right button {
+    background-color: $secondary;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .contact-left,
+    .contact-right {
+      width: 100%;
+    }
+  }
+  // contact page section end here
   footer {
     width: 100%;
     padding: 2rem 1rem;
