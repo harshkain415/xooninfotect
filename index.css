@@ -759,6 +759,11 @@ main .servicesPage .servicesDetails .servicesCards {
   margin: 1rem 0rem;
   border-radius: 10px;
 }
+main .servicesPage .servicesDetails .servicesCards .leftServicesCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media only screen and (min-width: 1024px) {
   main .servicesPage .servicesDetails .servicesCards {
     flex-direction: row;
@@ -774,7 +779,7 @@ main .servicesPage .servicesDetails .servicesCards {
   }
 }
 main .servicesPage .servicesDetails .servicesCards .leftServicesCard img {
-  width: 150px;
+  width: 40%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -785,7 +790,7 @@ main .servicesPage .servicesDetails .servicesCards .leftServicesCard img {
   }
 }
 main .servicesPage .servicesDetails .servicesCards .rightServicesCard {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 @media only screen and (min-width: 1024px) {
   main .servicesPage .servicesDetails .servicesCards .rightServicesCard {
