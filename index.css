@@ -124,7 +124,7 @@ a {
 
 main {
   width: 100%;
-  min-height: 120vh;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
 }
@@ -280,7 +280,7 @@ main #hamburger-menu,
 main #mobile-menu {
   display: none;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   main #mobile-menu {
     background-color: #0b2545;
     width: 100%;
@@ -530,7 +530,7 @@ main .about {
   min-height: 70vh;
   color: #fff;
   position: relative;
-  padding: 3rem 1rem;
+  padding: 7rem 0rem;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -540,6 +540,7 @@ main .aboutContainer {
   align-items: center;
   flex-direction: column-reverse;
   padding: 0rem 1rem;
+  margin-bottom: 5rem;
 }
 @media only screen and (min-width: 1024px) {
   main .aboutContainer {
@@ -636,6 +637,46 @@ main .aboutContainer .rightAbout span {
     width: 15vw;
   }
 }
+main .about .mission {
+  background-color: #4787e8;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1024px) {
+  main .about .mission {
+    flex-direction: row;
+  }
+}
+main .about .mission .leftMission {
+  width: 100%;
+  justify-content: center;
+  margin: 2rem 0rem;
+}
+@media only screen and (min-width: 1024px) {
+  main .about .mission .leftMission {
+    width: 20%;
+    justify-content: flex-start;
+  }
+}
+main .about .mission .rightMission {
+  width: 100%;
+  padding: 1rem;
+  text-align: justify;
+}
+main .about .mission .rightMission p {
+  font-size: 18px;
+}
+@media only screen and (min-width: 1024px) {
+  main .about .mission .rightMission {
+    width: 60%;
+    justify-content: flex-start;
+  }
+}
+main .about :nth-child(4) {
+  background-color: #666;
+}
 main .services {
   width: 100%;
   min-height: 70vh;
@@ -699,6 +740,68 @@ main .services .servicesContainer .cards h1 {
   main .services .servicesContainer .cards h1 {
     font-size: 24px;
   }
+}
+main .servicesPage {
+  flex-direction: column;
+  width: 100;
+  min-height: 80vh;
+  background-color: #fff;
+  padding: 7rem 2rem;
+}
+main .servicesPage .servicesDetails {
+  flex-direction: column;
+}
+main .servicesPage .servicesDetails .servicesCards {
+  flex-direction: column;
+  background-color: #ece9e6;
+  width: 100%;
+  padding: 2rem 1rem;
+  margin: 1rem 0rem;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 1024px) {
+  main .servicesPage .servicesDetails .servicesCards {
+    flex-direction: row;
+    width: 70%;
+  }
+  main .servicesPage .servicesDetails .servicesCards .leftServicesCard {
+    width: 20%;
+    margin-right: 2rem;
+  }
+  main .servicesPage .servicesDetails .servicesCards .rightServicesCard {
+    margin-left: 2rem;
+    width: 60%;
+  }
+}
+main .servicesPage .servicesDetails .servicesCards .leftServicesCard img {
+  width: 150px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (min-width: 1024px) {
+  main .servicesPage .servicesDetails .servicesCards .leftServicesCard img {
+    width: 200px;
+  }
+}
+main .servicesPage .servicesDetails .servicesCards .rightServicesCard {
+  margin-top: 3rem;
+}
+@media only screen and (min-width: 1024px) {
+  main .servicesPage .servicesDetails .servicesCards .rightServicesCard {
+    margin-top: 0rem;
+  }
+}
+main .servicesPage .servicesDetails .servicesCards .rightServicesCard h3 {
+  font-size: 25px;
+  margin: 1rem 0rem;
+}
+main .servicesPage .servicesDetails .servicesCards .rightServicesCard h5 {
+  font-size: 22px;
+  margin: 1rem 0rem;
+}
+main .servicesPage .servicesDetails .servicesCards .rightServicesCard ul {
+  padding-left: 2rem;
 }
 main .parallax {
   width: 100%;
@@ -790,10 +893,11 @@ main .blog .blogContainer {
   margin: 2rem 0rem;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: center;
-  width: 70%;
-  margin-block: 2rem;
   gap: 2rem;
+  overflow: hidden;
+  position: relative;
 }
 main .blog .blogContainer img {
   max-width: 100%;
@@ -801,8 +905,12 @@ main .blog .blogContainer img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media only screen and (min-width: 1024px) {
+  main .blog .blogContainer {
+    width: 70%;
+  }
+}
 main .blog .blogContainer .slider {
-  overflow: hidden;
   position: relative;
   width: 100%;
 }
@@ -878,6 +986,20 @@ main .blog .blogContainer .button button {
   color: #333;
   transition: color 0.3s ease;
 }
+main .blog .blogContainer .button button i {
+  font-size: 20px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #4787e8;
+  color: #fff;
+  z-index: 10;
+}
+@media only screen and (min-width: 1024px) {
+  main .blog .blogContainer .button button i {
+    font-size: 40px;
+    padding: 0.5rem;
+  }
+}
 main .blog .blogContainer .button button:hover {
   color: #000;
 }
@@ -886,6 +1008,78 @@ main .blog .blogContainer .button button.prev {
 }
 main .blog .blogContainer .button button.next {
   right: 0;
+}
+main .blogPageContainer {
+  display: grid;
+  place-items: center;
+  min-height: 80vh;
+  padding: 7rem 2rem 2rem 2rem;
+}
+main .blogPageContainer .heading {
+  color: #fff;
+}
+main .blogPageContainer .blogContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+main .blogPageContainer .blogContainer img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .blogPageContainer .blogContainer .card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, 20rem + 2vw, 22rem);
+  overflow: hidden;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ece9e6;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+}
+main .blogPageContainer .blogContainer .card .cardBody {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .blogPageContainer .blogContainer .card .cardBody .tag {
+  align-self: flex-start;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  font-size: 0.75rem;
+}
+main .blogPageContainer .blogContainer .card .cardBody .tag + .tag {
+  margin-left: 0.5em;
+}
+main .blogPageContainer .blogContainer .card .cardBody .tag-blue {
+  background: #56ccf2;
+  background: linear-gradient(to bottom, #2f80ed, #1081a6);
+  color: #fafafa;
+}
+main .blogPageContainer .blogContainer .card .cardBody .cardBody h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+main .blogPageContainer .blogContainer .card .cardFooter {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+main .blogPageContainer .blogContainer .card .cardFooter .user {
+  display: flex;
+  gap: 0.5rem;
+}
+main .blogPageContainer .blogContainer .card .cardFooter .userImage {
+  border-radius: 50%;
+}
+main .blogPageContainer .blogContainer .card .cardFooter .userInfo > small {
+  color: #666;
 }
 main .contact {
   width: 100%;
@@ -927,6 +1121,92 @@ main .contact .contactContainer .leftContainer h1 {
 }
 main .contact .contactContainer .rightContainer .button {
   margin-top: 0rem;
+}
+main .contactContainerPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  background-color: white;
+}
+main .contact-container {
+  background-color: #4787e8;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main .contact-container {
+    padding: 3rem 4rem;
+    width: 60%;
+  }
+}
+main .contact-left {
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .contact-right {
+  width: 100%;
+}
+main .contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .contact-info span {
+  font-size: 18px;
+}
+@media only screen and (min-width: 768px) {
+  main .contact-info span {
+    font-size: 20px;
+  }
+}
+main .contact-info i {
+  margin-right: 20px;
+  font-size: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  main .contact-info i {
+    font-size: 40px;
+  }
+}
+main .contact-right form {
+  display: flex;
+  flex-direction: column;
+}
+main .contact-right input,
+main .contact-right textarea,
+main .contact-right button {
+  margin-bottom: 10px;
+  padding: 15px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+main .contact-right textarea {
+  height: 100px;
+}
+main .contact-right button {
+  background-color: #0b2545;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  main .contact-container {
+    flex-direction: column;
+  }
+  main .contact-left,
+  main .contact-right {
+    width: 100%;
+  }
 }
 main footer {
   width: 100%;
